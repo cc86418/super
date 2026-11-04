@@ -1,0 +1,15 @@
+{
+  "name": "squeek-wheel-run",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wheel Run — live Squeekchain hamster-powered endless runner for Genesis Buildooooor",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host --port 4173"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#1a0f0a" />
+    <meta name="squeekchain-project" content="pending-challenge" />
+    <meta name="description" content="Wheel Run — endless survival race powered by the live Squeekchain hamster wheel. Built for Genesis Buildooooor." />
+    <title>Wheel Run — Squeekchain Genesis</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23f4a261'/%3E%3Ccircle cx='24' cy='28' r='3' fill='%231a0f0a'/%3E%3Ccircle cx='40' cy='28' r='3' fill='%231a0f0a'/%3E%3Cpath d='M22 40c4 6 16 6 20 0' stroke='%231a0f0a' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">🐹</span>
+          <div>
+            <h1>Wheel Run</h1>
+            <p class="tagline">Powered by live Squeekchain hamster wheel</p>
+          </div>
+        </div>
+        <div class="live-badge" id="liveBadge" title="Live wheel telemetry">
+          <span class="pulse" id="livePulse"></span>
+          <span id="liveLabel">connecting…</span>
+        </div>
+      </header>
+
+      <main class="stage-wrap">
+        <canvas id="game" width="960" height="540" aria-label="Wheel Run game canvas"></canvas>
+
+        <div class="hud" id="hud" hidden>
+          <div class="hud-left">
+            <div class="stat"><span class="k">Score</span><span class="v" id="hudScore">0</span></div>
+            <div class="stat"><span class="k">Best</span><span class="v" id="hudBest">0</span></div>
+            <div class="stat"><span class="k">Mult</span><span class="v" id="hudMult">×1.0</span></div>
+          </div>
+          <div class="hud-right">
+            <div class="stat compact"><span class="k">Wheel</span><span class="v" id="hudRpm">0 rpm</span></div>
+            <div class="stat compact"><span class="k">Block</span><span class="v" id="hudBlock">—</span></div>
+            <div class="stat compact"><span class="k">Settled</span><span class="v" id="hudSettled">—</span></div>
+          </div>
+        </div>
+
+        <div class="overlay" id="overlay">
+          <div class="panel" id="panel">
+            <!-- filled by JS -->
+          </div>
+        </div>
+      </main>
+
+      <footer class="foot">
+        <p>
+          Built for Squeekchain Genesis Buildooooor: <a href="https://squeekchain.com/genesis" target="_blank" rel="noopener">https://squeekchain.com/genesis</a>
+          · <a href="https://squeekchain.com" target="_blank" rel="noopener">squeekchain.com</a>
+          · <a href="https://docs.squeekchain.com" target="_blank" rel="noopener">docs</a>
+        </p>
+        <p class="hint" id="controlsHint">Space / ↑ jump · ↓ slide · Esc pause · Tap to jump on mobile</p>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
